@@ -1,0 +1,17 @@
+<h1>My Concerts</h1>
+
+Insert your Password: <input type="password" [(ngModel)]="psw" />
+<button name="Show" (click)="show(psw)">Show</button>
+
+<table class='table' *ngIf="concerts">
+    <thead>
+        <tr>
+            <th>Your Concerts</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let concert of concerts">
+            <td>{{ concert }}</td>
+        </tr>
+    </tbody>
+</table>

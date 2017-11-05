@@ -9,6 +9,7 @@ import 'rxjs/add/observable/forkJoin';
     styleUrls: ['./concerts.component.css']
 })
 export class ConcertsComponent {
+    //Classe contenente Operazioni CRUD sui Concerti
     public concerts: Concert[];
     public selectedConcert: Concert | undefined;
 
@@ -113,7 +114,7 @@ export class ConcertsComponent {
         concert.deleted = true;
         this.selectConcert();
     }
-
+    //Funzione di PRENOTAZIONE del Concerto, viene creata un'Associazione tramite PUT annidata in una GET
     async book(psw: string, c: Concert) {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let association = new Association();

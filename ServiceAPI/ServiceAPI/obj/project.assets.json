@@ -9005,11 +9005,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\utente\\Desktop\\Volta Buona\\VoltaBuona\\ServiceAPI\\ServiceAPI\\ServiceAPI.csproj",
+      "projectUniqueName": "C:\\Users\\utente\\Desktop\\ProgettoCSharp\\ProgettoModernConcurrent\\ServiceAPI\\ServiceAPI\\ServiceAPI.csproj",
       "projectName": "ServiceAPI",
-      "projectPath": "C:\\Users\\utente\\Desktop\\Volta Buona\\VoltaBuona\\ServiceAPI\\ServiceAPI\\ServiceAPI.csproj",
+      "projectPath": "C:\\Users\\utente\\Desktop\\ProgettoCSharp\\ProgettoModernConcurrent\\ServiceAPI\\ServiceAPI\\ServiceAPI.csproj",
       "packagesPath": "C:\\Users\\utente\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\utente\\Desktop\\Volta Buona\\VoltaBuona\\ServiceAPI\\ServiceAPI\\obj\\",
+      "outputPath": "C:\\Users\\utente\\Desktop\\ProgettoCSharp\\ProgettoModernConcurrent\\ServiceAPI\\ServiceAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -70,13 +70,14 @@ DELETE http://localhost:5000/api/associations?id=ID -> Elimina l'associazione av
 - Nella pagina iniziale sono semplicemente elencate le funzionalità dell'interfaccia. Per testare l'interfaccia, usare il menù affianco.
 - Cliccando su "Our Customers" sarà possibile interagire con la tabella degli utenti: premendo sul pulsantino "+" si creerà un nuovo slot utente che è possibile riempire con le info desiderate con il form affianco. Cliccando su utenti già creati sarà possibile modificarli modificando il form, ed infine è possibile cancellarli premendo il pulsante "delete" relativo all'utente che si desidera eliminare.
 ATTENZIONE: nessuna modifica al database sarà resa persistente se, PRIMA di abbandonare la pagina, non si clicca sul pulsante "SAVE" in basso a destra.
-- Cliccando su "Concert List" saranno disponibili funzioni analoghe a quelle viste per gli utenti, ma per i concerti. Accanto ad ogni concerto, oltre al già visto pulsante "delete", saranno disponibili una casella di testo ed un pulsante "Book". Inserendo nella casella di testo la password di un utente e cliccando su "Book", verrà creata un associazione fra l'utente avente la password inserita e il concerto relativo. L'utente avrà quindi prenotato quel concerto.
+- Cliccando su "Concert List" saranno disponibili funzioni analoghe a quelle viste per gli utenti, ma per i concerti. Accanto ad ogni concerto, oltre al già visto pulsante "delete", saranno disponibili una casella di testo ed un pulsante "Book". Inserendo nella casella di testo la password (NB: NON VIENE INDICATO NELL'INTERFACCIA) di un utente e cliccando su "Book", verrà creata un associazione fra l'utente avente la password inserita e il concerto relativo. L'utente avrà quindi prenotato quel concerto.
 - Cliccando su "My Concerts" sarà possibile visualizzare la lista dei concerti prenotati dai vari utenti. Inserendo nella casella di testo la password dell'utente desiderato e cliccando su "Show" sarà visualizzata la lista dei concerti prenotati da quell'utente.
 
 PS.: Si noti che il progetto allo stato attuale è lontano dalla perfezione. Sono infatti presenti i seguenti problemi:
 - Il formato dei concerti appartenenti ad ogni utente viene visualizzato tramite la sua stringa JSON, e non separando gli opportuni campi.
 Trattasi di un problema di scope delle variabili e di parsing che non permettono di associare alla lista dei JSON la lista dei Concerti.
 - Quando si prenota un concerto, la password viene inserita dentro tutte la caselle di testo.
+
 Non è stato possibile eseguire debugging e correzioni a causa dei vincoli temporali sulla consegna del progetto stesso.
 
 Andrea Scala - Matr. O55000337

@@ -9,6 +9,7 @@ import 'rxjs/add/observable/forkJoin';
     styleUrls: ['./users.component.css']
 })
 export class UsersComponent {
+    //Classe contenente Operazioni CRUD sugli Utenti
     public users: User[];
     public selectedUser: User | undefined;
 

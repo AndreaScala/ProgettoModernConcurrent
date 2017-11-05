@@ -4,6 +4,7 @@ namespace ServiceAPI.Dal
 {
     public class AppDbContext : DbContext
     {
+        //Definizione tabelle del DB.
         public DbSet<User> Users { get; set; }
 
         public DbSet<Concert> Concerts { get; set; }
@@ -21,7 +22,6 @@ namespace ServiceAPI.Dal
         {
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             {
-                // Skip shadow types
                 if (entityType.ClrType == null)
                     continue;
 

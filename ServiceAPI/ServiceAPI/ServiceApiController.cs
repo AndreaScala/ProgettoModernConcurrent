@@ -8,6 +8,8 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Threading;
 
+//Definizione gestione chiamate REST
+
 namespace ServiceAPI
 {
     [Route("api")]
@@ -15,7 +17,7 @@ namespace ServiceAPI
     {
         static readonly object setupLock = new object();
         static readonly SemaphoreSlim parallelism = new SemaphoreSlim(2);
-
+        //Per creare il DB e le tabelle
         [HttpGet("setup")]
         public IActionResult SetupDatabase()
         {
@@ -48,7 +50,7 @@ namespace ServiceAPI
                 parallelism.Release();
             }
         }
-
+        //Ricerca Utente tramite password
         [HttpGet("user")]
         public async Task<IActionResult> GetUser([FromQuery]string psw)
         {
@@ -57,7 +59,7 @@ namespace ServiceAPI
                 return Ok(await context.Users.FirstOrDefaultAsync(x => x.Password == psw));
             }
         }
-
+        //Inserimento utente
         [HttpPut("users")]
         public async Task<IActionResult> CreateUser([FromBody]User user)
         {
@@ -70,7 +72,7 @@ namespace ServiceAPI
                 return Ok();
             }
         }
-
+        //Modifica Utente
         [HttpPost("users")]
         public async Task<IActionResult> UpdateUser([FromBody]User user)
         {
@@ -82,7 +84,7 @@ namespace ServiceAPI
             }
         }   
 
-
+        //Cancellazione Utente
         [HttpDelete("users")]
         public async Task<IActionResult> DeleteUser([FromQuery]int id)
         {
@@ -117,7 +119,7 @@ namespace ServiceAPI
                 parallelism.Release();
             }
         }
-
+        //Ricerca Concerto per ID
         [HttpGet("concert")]
         public async Task<IActionResult> GetConcert([FromQuery]int id)
         {
@@ -126,7 +128,7 @@ namespace ServiceAPI
                 return Ok(await context.Concerts.FirstOrDefaultAsync(x => x.Id == id));
             }
         }
-
+        //Inserimento Concerto
         [HttpPut("concerts")]
         public async Task<IActionResult> CreateConcert([FromBody]Concert concert)
         {
@@ -139,7 +141,7 @@ namespace ServiceAPI
                 return Ok();
             }
         }
-
+        //Modifica Concerto
         [HttpPost("concerts")]
         public async Task<IActionResult> UpdateConcert([FromBody]Concert concert)
         {
@@ -151,7 +153,7 @@ namespace ServiceAPI
             }
         }
 
-
+        //Cancellazione Concerto
         [HttpDelete("concerts")]
         public async Task<IActionResult> DeleteConcert([FromQuery]int id)
         {
@@ -186,7 +188,7 @@ namespace ServiceAPI
                 parallelism.Release();
             }
         }
-
+        //Ricerca tutte le Associazioni per UID (ID dell'utente corrispondente)
         [HttpGet("associationss")]
         public async Task<IActionResult> GetAssociationss([FromQuery] int uid)
         {
@@ -204,7 +206,7 @@ namespace ServiceAPI
                 parallelism.Release();
             }
         }
-
+        //Ricerca Associazione per ID
         [HttpGet("association")]
         public async Task<IActionResult> GetAssociation([FromQuery]int id)
         {
@@ -213,7 +215,7 @@ namespace ServiceAPI
                 return Ok(await context.Associations.FirstOrDefaultAsync(x => x.Id == id));
             }
         }
-
+        //Inserimento Associazione (Prenotazione)
         [HttpPut("associations")]
         public async Task<IActionResult> CreateAssociation([FromBody]Association association)
         {

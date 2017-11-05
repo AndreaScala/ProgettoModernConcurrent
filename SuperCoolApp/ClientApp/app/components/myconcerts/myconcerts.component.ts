@@ -11,7 +11,7 @@ export class MyConcertsComponent {
 
     constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string) {
     }
-
+    //Funzione di Visualizzazione dei Concerti Prenotati tramite GET annidate.
     async show(psw: string) {
         this.http.get(this.baseUrl + 'api/user?psw=' + psw).subscribe(result => {
             let user = new User();
@@ -35,6 +35,7 @@ export class MyConcertsComponent {
                         c = result.json();
                         c.hasChanges = true;
                         c.deleted = false;*/
+                        //Adattamento problema Parsing JSON
                         concertList.push(result.text());
                     }, error => console.error(error));
                 }

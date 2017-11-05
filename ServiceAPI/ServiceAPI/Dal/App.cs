@@ -3,9 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+//Classi costituenti le entry delle tabelle del DB.
 namespace ServiceAPI.Dal
 {
-
+    //Classe Utente
     public class User
     {
         public int Id { get; set; }
@@ -14,7 +15,7 @@ namespace ServiceAPI.Dal
         public int Age { get; set; }
         public string Password { get; set; }
     }
-
+    //Classe Concerto
     public class Concert
     {
         public int Id { get; set; }
@@ -22,7 +23,7 @@ namespace ServiceAPI.Dal
         public string Where { get; set; }
         public string When { get; set; }
     }
-
+    //Classe Associazione per legare le due classi precedenti
     public class Association
     {
         public int Id { get; set; }

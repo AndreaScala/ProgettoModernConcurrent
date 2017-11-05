@@ -16,6 +16,7 @@ Affinchè il tutto funzioni sono necessari i seguenti software:
 - Postman (per testare le chiamate REST)
 - Git
 - TortoiseGit (o software equivalenti per clonare il repository)
+- Se non dovessero venire visualizzati i dati salvati nel database, potrebbe essere necessario installare un'estensione del browser che permette le chiamate CORS (anche se ora non dovrebbe più essere necessario).
 
 Passaggi:
 - Clonare questa repository su una cartella a scelta (Tramite TortoiseGit o equivalenti).

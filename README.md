@@ -66,7 +66,7 @@ POST http://localhost:5000/api/associations -> Modifica un'Associazione (specifi
 DELETE http://localhost:5000/api/associations?id=ID -> Elimina l'associazione avente per id quello specificato.
 
 - Avviare da Visual Studio la seconda soluzione "SuperCoolApp".
-- Eseguire senza Debug. Si aprirà il Browser che visualizzerà la pagina iniziale di Ticketytack!
+- Eseguire senza Debug. Si aprirà il Browser che visualizzerà la pagina iniziale di Ticketytack! (NB.: La prima volta l'operazione potrebbe richiedere alcuni minuti a causa del download delle dipendenze Angular2).
 - Nella pagina iniziale sono semplicemente elencate le funzionalità dell'interfaccia. Per testare l'interfaccia, usare il menù affianco.
 - Cliccando su "Our Customers" sarà possibile interagire con la tabella degli utenti: premendo sul pulsantino "+" si creerà un nuovo slot utente che è possibile riempire con le info desiderate con il form affianco. Cliccando su utenti già creati sarà possibile modificarli modificando il form, ed infine è possibile cancellarli premendo il pulsante "delete" relativo all'utente che si desidera eliminare.
 ATTENZIONE: nessuna modifica al database sarà resa persistente se, PRIMA di abbandonare la pagina, non si clicca sul pulsante "SAVE" in basso a destra.
